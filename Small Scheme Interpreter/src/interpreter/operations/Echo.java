@@ -1,22 +1,23 @@
 package interpreter.operations;
+
 import interpreter.structures.Node;
 import interpreter.structures.Operation;
 
 
 public class Echo extends Operation {
-	
-	public Echo(Node node) {
-		super(node);
-	}
-	
-	public double execute() {
-		double result = this.getOpAt(0).execute();
-		System.out.println(result);
-		return result;
-	}
+    public Echo(final Node node) {
+        super(node);
+    }
 
-	public String opString() {
-		return "echo";
-	}
+    @Override
+    public double execute() {
+        final double result = this.getOpAt(0).execute();
+        System.out.println(result);
+        return result;
+    }
 
+    @Override
+    public String opString() {
+        return "echo";
+    }
 }

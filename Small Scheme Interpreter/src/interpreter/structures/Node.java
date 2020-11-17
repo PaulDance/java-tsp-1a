@@ -2,6 +2,8 @@ package interpreter.structures;
 
 
 public interface Node {
-	public double execute();
-	public String toString();
+    double execute();
+
+    @Override
+    String toString();
 }

@@ -2,14 +2,15 @@ package interpreter.structures;
 
 
 public class Variable extends Scalar {
-	String name;
-	
-	public Variable(String name) {
-		super(0);
-		this.name = name;
-	}
-	
-	public String toString() {
-		return this.name;
-	}
+    private final String name;
+
+    public Variable(final String name) {
+        super(0);
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return this.name;
+    }
 }
